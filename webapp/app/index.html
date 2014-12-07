@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <title>My Awsome App</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body ng-controller='WelcomeCtrl'>
+  <div class="container">
+    <div class="header">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li>
+            <a href="#">Home</a>
+          </li>
+
+          <li>
+            <a href="#signup">Signup</a>
+          </li>
+
+        </ul>
+      </nav>
+      <h3 class="text-muted">Todo App</h3>
+    </div>
+    <div ui-view>
+    </div>
+
+  </div>
+  <script src="/js/bundle.js"></script>
+</body>
+</html>
