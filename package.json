@@ -13,6 +13,7 @@
     "angular-ui-router": "^0.2.11",
     "body-parser": "^1.10.0",
     "bootstrap": "^3.3.1",
+    "coffee-script": "^1.8.0",
     "connect-livereload": "^0.5.2",
     "debug": "^2.1.0",
     "express": "^4.10.4",
@@ -32,6 +33,6 @@
   },
   "repository": {
     "type": "git",
-    "url" : "https://github.com/mach1/TODOapp"
+    "url": "https://github.com/mach1/TODOapp"
   }
 }
