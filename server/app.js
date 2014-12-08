@@ -10,13 +10,14 @@ var db = monk('localhost:27017/todoapp');
 
 var app = express();
 
-app.use(router);
 app.use(livereload());
 app.use(express.static(__dirname + '/../webapp/dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended : true
 }));
+app.use(router);
+
 
 router.post('/adduser', function(req, res) {
   var usercollection = db.get('usercollection');

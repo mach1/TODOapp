@@ -14,10 +14,10 @@ serverport = 5000
 
 paths =
   styles : ['webapp/app/styles/*.css']
-  scripts : ['webapp/app/scripts/*.js']
+  scripts : ['webapp/app/scripts/*.coffee']
   html : ['webapp/app/*.html', 'webapp/app/views/*.html']
 
-gulp.task 'serve', -> 
+gulp.task 'serve', ->
   nodemon
     script: './server/bin/server',
     ignore: './webapp'
@@ -33,10 +33,11 @@ gulp.task 'styles', ->
     .pipe refresh lrserver
 
 gulp.task 'browserify', ->
-  gulp.src 'webapp/app/scripts/main.js'
+  gulp.src 'webapp/app/scripts/main.coffee', read: false
     .pipe browserify
-      insertGlobals: true,
       debug: true
+      transform: ['coffeeify']
+      extensions: ['.coffee']
     .pipe concat 'bundle.js'
     .pipe gulp.dest 'webapp/dist/js'
     .pipe refresh lrserver
