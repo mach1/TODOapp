@@ -19,7 +19,7 @@ paths =
 
 gulp.task 'serve', ->
   nodemon
-    script: './server/bin/server',
+    script: './server/bin/server.coffee',
     ignore: './webapp'
 
 gulp.task 'lint', ->
