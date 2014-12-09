@@ -14,7 +14,7 @@ serverport = 5000
 
 paths =
   styles : ['webapp/app/styles/*.css']
-  scripts : ['webapp/app/scripts/*.coffee']
+  scripts : ['webapp/app/scripts/*.coffee', 'webapp/app/scripts/**/*.coffee']
   html : ['webapp/app/*.html', 'webapp/app/views/*.html']
 
 gulp.task 'serve', ->

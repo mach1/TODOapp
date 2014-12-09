@@ -1,9 +1,8 @@
-module.exports = ['$scope', '$http', ($scope, $http) ->
+module.exports = ['$scope', '$http', 'userService', ($scope, $http, userService) ->
   $scope.user = {}
 
   $scope.submit = (user) ->
-    console.log(user)
-    $http.post '/adduser', user: user
+    userService.saveUser user
 
   $scope.isFormInvalid = ->
    false
